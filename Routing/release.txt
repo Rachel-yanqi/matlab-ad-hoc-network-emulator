@@ -1,0 +1,22 @@
+updated:
+update mac scheduler, allocate time slots to links (assume time slot=1ms) every seconds
+make sure each packet transfer to proper dest by implementing routing table
+improve multicast functions: packet duplicate, packet tranfer
+new mobility data 
+specifiy node searching area (only send MAC msg to nodes inside particular halo) for halo configuration
+realization multicast
+sender generate pkt when it can send pkt (timeout funtion)
+halo should consume less time on searching its neighbor
+halo provide more stable route, better select node belongs to last time (check connectivity) o.w. choose members in previous halo
+
+
+
+updating:
+we still need to test directional antenna parts on halo
+each neighbor should have one queue
+directional minimum spanning tree
+antenna switching
+build directional routing table
+correct phantom id issue: I got 2 phantom.id==2
+MAC link should hold while transmission is happening, queue.busy==0 if delta_t > transmission time. Now it changes state
+in every sampling period (10ms). (CSMA)
